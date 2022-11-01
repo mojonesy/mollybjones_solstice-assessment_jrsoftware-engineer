@@ -19,7 +19,6 @@
     "friday": "node ./src/utils/sortByFridayAfterFour.js",
     "eject": "react-scripts eject"
   },
-  "type": "module",
   "eslintConfig": {
     "extends": [
       "react-app",
