@@ -72,4 +72,4 @@ export default function sortByFridayAfterFour(history) {
 }
 
 
-console.log(sortByMostRecent(listenHistory));
+console.log(sortByFridayAfterFour(listenHistory));
