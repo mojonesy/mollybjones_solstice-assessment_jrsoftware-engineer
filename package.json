@@ -15,8 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "topten": "node ./src/utils/findTopTenSongs.js",
+    "mostrecent": "node ./src/utils/sortByMostRecent.js",
     "eject": "react-scripts eject"
   },
+  "type": "module",
   "eslintConfig": {
     "extends": [
       "react-app",
