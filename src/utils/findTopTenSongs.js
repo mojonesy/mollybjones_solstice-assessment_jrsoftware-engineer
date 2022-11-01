@@ -2,7 +2,23 @@ import listenHistory from "../data/listen_history.json" assert { type: "json" };
 
 export default function findTopTenSongs(history) {
     if(history.length === 0) return null;
+    
+    const [...watched] = getArtistsAndTitles(history);
+    const final = watched.reduce((watchedAndCount, watch) => {
+        let result = {};
+        if (!watchedAndCount.some((watchCount) => watchCount["song"] === watch.song)) {
+            result = { song: watch.song, artist: watch.artist, count: 1 };
+            watchedAndCount.push(result);
+        } else {
+            const found = watchedAndCount.find((watchCount) => watchCount["song"] === watch.song);
+            found.count++;
+        }
+        return watchedAndCount;
+    }, []);
 
+    final.sort((a, b) => b.count - a.count);
+    const actual = final.slice(0, 10);
+    console.log(actual);
 }
 
 
@@ -22,7 +38,8 @@ function getArtistsAndTitles(history) {
             let artist = watch.subtitles[0].name.slice(0, -8);  // remove " - Topic" string from subtitles.name                        
             result.push({
                 song: song,
-                artist: artist
+                artist: artist,
+                count: 0
             });
         } else {
             result.push({
