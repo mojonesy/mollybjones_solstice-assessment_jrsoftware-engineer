@@ -48,6 +48,10 @@ img {
     max-width: 100%;
 }
 
+.btn {
+    border: none;
+}
+
 
 /* Title */
 .title {
@@ -59,7 +63,14 @@ img {
     border-bottom-right-radius: 20px;
 }
 
+/* Cards */
+.card {
+    margin: 25px;
+    padding: 5px 15px;
+    border: var(--clr-accent) 2px solid;
+    border-radius: 25px;
+}
 
-
-
-
+.card-title {
+    text-align: center;
+}
