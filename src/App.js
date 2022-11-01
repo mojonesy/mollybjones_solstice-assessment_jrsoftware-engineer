@@ -1,3 +1,6 @@
+import React from 'react';
+import TopTenSongs from './components/TopTenSongs';
+import TopFridaySongs from './components/TopFridaySongs';
 import './App.css';
 
 function App() {
@@ -11,6 +14,11 @@ function App() {
             alt="youtube music logo"></img>
         </div>
       </h1>
+
+      <div className="cards">
+        <TopTenSongs />
+        <TopFridaySongs />
+      </div>
     </div>
   );
 }
