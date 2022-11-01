@@ -2,7 +2,7 @@ import listenHistory from "../data/listen_history.json" assert { type: "json" };
 
 
 export default function findTopTenSongs(history) {
-    if(history.length === 0) return null;
+    if (history.length === 0) return null;
     
     // run helper function "getArtistAndTitles" below and set to a variable of "watched" 
     const [...watched] = getArtistsAndTitles(history);
@@ -61,3 +61,6 @@ function getArtistsAndTitles(history) {
 
 
 console.log(findTopTenSongs(listenHistory));
+
+
+/* Break time */
