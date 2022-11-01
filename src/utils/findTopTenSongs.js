@@ -1,6 +1,9 @@
 import listenHistory from "../data/listen_history.json" assert { type: "json" };
 
-
+/**
+ * sorts listenHistory and
+ * @returns to 10 most played songs by artist
+ */
 export default function findTopTenSongs(history) {
     if (history.length === 0) return null;
     

@@ -1,18 +1,23 @@
 import listenHistory from "../data/listen_history.json" assert { type: "json" };
 
-
+/**
+ * sorts listenHistory and 
+ * @returns top 10 songs played on Friday after 4pm by artist
+ */
 export default function sortByFridayAfterFour(history) {
     if (history.length === 0) return null;
 
     // run helper function "getArtistAndTitles" below and set to a variable of "toSort" 
     const toFilter = getArtistsTitlesAndDateTimes(history);
 
+    // filter by played on friday, on or after 4pm
     const filteredByFriday = toFilter.filter((watch) => {
         return watch.datePlayed.slice(0, 3) === "Fri";
     });
     const filteredByFourPM = filteredByFriday.filter((watch) => {
         return parseInt(watch.datePlayed.slice(16, 18)) >= 16;
     })
+
 
     // "watchedAndCount" === previous value; "watch" === current value; initial value of an empty array
     const final = filteredByFourPM.reduce((watchedAndCount, watch) => {
@@ -33,6 +38,7 @@ export default function sortByFridayAfterFour(history) {
     
     return actual;
 }
+
 
 
 /**
