@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    --ff-primary: 'Roboto', sans-serif;
+
+    --fw-reg: 300;
+    --fw-bold: 400;
+
+    --clr-dark: #363636;
+    --clr-mid-dark: #3f4042;
+    --clr-light: #f2f2f2;
+    --clr-accent: #c3352e;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+
+/* General */
+html { scroll-behavior: smooth }
+
+body {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+}
