@@ -1,7 +1,7 @@
 import listenHistory from "../data/listen_history.json" assert { type: "json" };
 
 
-export default function sortByMostRecent(history) {
+export default function sortByFridayAfterFour(history) {
     if (history.length === 0) return null;
 
     // run helper function "getArtistAndTitles" below and set to a variable of "toSort" 
