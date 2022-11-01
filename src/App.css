@@ -22,7 +22,7 @@
     --fs-body: 1rem;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -36,7 +36,7 @@
 html { scroll-behavior: smooth }
 
 body {
-    background-color: var(--clr-dark);
+    background-color: var(--clr-mid-dark);
     color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
@@ -50,7 +50,18 @@ img {
 
 .btn {
     border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0.75em 1.5em;
+    background-color: var(--clr-accent);
+    color: var(--clr-light);
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: var(--fs-body);
 }
+
 
 
 /* Title */
@@ -63,14 +74,32 @@ img {
     border-bottom-right-radius: 20px;
 }
 
+.logo {
+    max-width: 10em;
+}
+
 /* Cards */
 .card {
-    margin: 25px;
-    padding: 5px 15px;
-    border: var(--clr-accent) 2px solid;
+    margin: 2em;
+    padding: 0.5em 1em 1em;
+    border: var(--clr-dark) 0.5px solid;
     border-radius: 25px;
+    background-color: var(--clr-mid-dark);
+    filter: drop-shadow(0.25rem 0.75rem 0.25rem var(--clr-dark));
+    display: flex;
+    flex-direction: column;
 }
 
 .card-title {
     text-align: center;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+@media (min-width: 800px) {
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
