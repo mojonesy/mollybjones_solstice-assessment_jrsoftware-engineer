@@ -23,7 +23,8 @@ export default function findTopTenSongs(history) {
     // sort returned array of objects in descending order, return the first 10 only
     final.sort((a, b) => b.count - a.count);
     const actual = final.slice(0, 10);
-    console.log(actual);
+    
+    return actual;
 }
 
 
@@ -59,4 +60,4 @@ function getArtistsAndTitles(history) {
 
 
 
-findTopTenSongs(listenHistory);
+console.log(findTopTenSongs(listenHistory));
