@@ -18,7 +18,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `npm run topten`
@@ -50,7 +50,7 @@ I first ran `create-react-app` to start this project, as I knew I wanted to crea
 ### Required Scripts
 I then completed the required assignment quoted above in the files `findTopTenSongs.js` and `sortByFridayAfterFour.js`. For both of these functions I only needed to work with the song, artist, and time values of the JSON, so I created a helper function. The top ten helper function loops through the JSON data and returns an array of objects containing some duplicates of `{song: ..., artist: ..., count: 0}` This way I could then utilize only the data I needed in the main function. The main function takes the array of objects and uses the reduce method to map out a new array of objects, without duplicates and with incremented counts. The array is sorted in descending order and cut down to the top ten.
 
-The second function I created filters the JSON data by songs played on Fridays after 4pm. I thought this would be a fun script to see the most popular songs played by Solstice employees at the end of the work week [ Interestingly, one of them is titled "Monday" - which I see as a positive sign that working at Solstice is an enjoyable experience :) ] This `sortByFridayAfterFour` function also uses a helper function to return only `{song: ..., artist: ..., datePlayed: ...}` - "datePlayed" being the watch time turned to a date string. In the main function, the data is filter by "Fri" and then by those played after 4pm, or 16:00:00. Finally, it is reduced to return a new array of non-duplicates, sorted, and cut down to 10.
+The second function I created filters the JSON data by songs played on Fridays after 4pm. I thought this would be a fun script to see the most popular songs played by Solstice employees at the end of the work week [ Interestingly, one of them is titled "Monday" - which I see as a positive sign that working at Solstice is an enjoyable experience :) ] This `sortByFridayAfterFour` function also uses a helper function to return only `{song: ..., artist: ..., datePlayed: ...}` - "datePlayed" being the watch time turned to a date string. In the main function, the data is filter by "Fri" and then by songs played after 4pm, or 16:00:00. Finally, it is reduced to return a new array of non-duplicates, sorted, and cut down to 10.
 
 ### Time & Space Complexity
 Because I used the `reduce()` method in both of my functions, the minimum time complexity is linear O(n) and the maximum is quadratic O(n^2)(excluding the helper function). All elements are iterated through at least once. Also, the `.sort()` function afterwards has a complexity of O(n log n). I would like to find a more efficient way to go about this problem in the future to reduce the amount of memory and runtime necessary.
