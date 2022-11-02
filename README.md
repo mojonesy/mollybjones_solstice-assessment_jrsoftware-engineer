@@ -60,4 +60,4 @@ After completing the required scripts, I decided to design and implement a very 
 
 One difficulty I had at first was deciding how to load the scripts upon rendering the web page. I didn't want to use "useEffect" to display the data immediately, but still wanted a way to store it in state before the user clicked the buttons. So I ended up creating promise functions for both click handlers so that I could `.then()` to set state and `.catch()` to display any potential errors.
 
-The app can be viewed on both mobile and desktop. I really enjoyed messing around with the styles and colors while trying to emulate the YouTube app.
+The app can be viewed on both mobile and desktop. I really enjoyed figuring out the scripts to manipulate such a large data set, and it was fun messing around with the styles and colors while trying to emulate the YouTube app!
