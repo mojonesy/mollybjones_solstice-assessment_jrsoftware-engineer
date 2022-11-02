@@ -20,7 +20,6 @@ function App() {
     }
     getData()
       .then(data => setTopTen(data))
-      .then(() => console.log(topTen))
       .catch(err => setError(err));
   }
 
@@ -33,7 +32,6 @@ function App() {
     }
     getData()
       .then(data => setTopFriday(data))
-      .then(() => console.log(topFriday))
       .catch(err => setError(err));
   }
 
