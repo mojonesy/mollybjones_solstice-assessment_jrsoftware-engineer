@@ -2,7 +2,7 @@
  * sorts listenHistory and
  * @returns to 10 most played songs by artist
  */
-export default function findTopTenSongs(history) {
+function findTopTenSongs(history) {
     if (history.length === 0) return null;
     
     // run helper function "getArtistAndTitles" below and set to a variable of "watched" 
@@ -57,3 +57,13 @@ function getArtistsAndTitles(history) {
 
     return result;
 }
+
+
+module.exports = findTopTenSongs;
+
+
+
+
+/* For running script in console => "npm run topten" */
+const history = require("../data/listen_history.json");
+console.log(findTopTenSongs(history));

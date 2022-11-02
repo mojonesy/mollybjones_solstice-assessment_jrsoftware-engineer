@@ -2,7 +2,7 @@
  * sorts listenHistory and 
  * @returns top 10 songs played on Friday after 4pm by artist
  */
-export default function sortByFridayAfterFour(history) {
+function sortByFridayAfterFour(history) {
     if (history.length === 0) return null;
 
     // run helper function "getArtistAndTitles" below and set to a variable of "toSort" 
@@ -68,3 +68,11 @@ export default function sortByFridayAfterFour(history) {
 
     return result;
 }
+
+
+module.exports = sortByFridayAfterFour;
+
+
+/* For running script in console => "npm run topfriday" */
+const history = require("../data/listen_history.json");
+console.log(sortByFridayAfterFour(history));
