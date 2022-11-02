@@ -16,7 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "topten": "node ./src/utils/findTopTenSongs.js",
-    "friday": "node ./src/utils/sortByFridayAfterFour.js",
+    "topfriday": "node ./src/utils/sortByFridayAfterFour.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
