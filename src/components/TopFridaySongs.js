@@ -18,15 +18,15 @@ function TopFridaySongs({ handleTopFriday, topFriday, error }) {
 
             { topFriday && 
               <div className="list">
-                {topFriday.map((watch) => {
-                  return (
-                    <ul className="list-items" key={watch.song}>
-                      <li className="item">
+                <ol className="list-items">
+                  {topFriday.map((watch) => {
+                    return (
+                      <li className="item" key={Math.random()}>
                         <span>{watch.song} </span> by <span>{watch.artist}</span> was played <span>{watch.count} </span> times
                       </li>
-                    </ul>
                     );
-                })}
+                  })}
+                </ol>
               </div>
             }
             { error && <p>An error occurred...</p> }

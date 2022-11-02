@@ -111,12 +111,12 @@ img {
 }
 
 /* Lists */
-.list-items { list-style: none }
-.item span {
-    color: var(--clr-accent-light);
-}
+.list-items { line-height: 1.8em }
+
+.item span { color: var(--clr-accent-light) }
 
 
+/* Desktop */
 @media (min-width: 800px) {
     img {
         height: 3em;
@@ -129,7 +129,7 @@ img {
     }
 
     .card {
-        margin: 2em;
+        margin: 1.4em 2em;
         width: 800px;
     }
 }
