@@ -1,5 +1,3 @@
-import listenHistory from "../data/listen_history.json" assert { type: "json" };
-
 /**
  * sorts listenHistory and
  * @returns to 10 most played songs by artist
@@ -59,11 +57,3 @@ function getArtistsAndTitles(history) {
 
     return result;
 }
-
-
-
-
-console.log(findTopTenSongs(listenHistory));
-
-
-/* Break time */

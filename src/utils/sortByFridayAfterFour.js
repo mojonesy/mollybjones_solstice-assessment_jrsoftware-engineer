@@ -1,5 +1,3 @@
-import listenHistory from "../data/listen_history.json" assert { type: "json" };
-
 /**
  * sorts listenHistory and 
  * @returns top 10 songs played on Friday after 4pm by artist
@@ -70,6 +68,3 @@ export default function sortByFridayAfterFour(history) {
 
     return result;
 }
-
-
-console.log(sortByFridayAfterFour(listenHistory));
